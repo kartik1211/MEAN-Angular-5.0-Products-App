@@ -1,0 +1,66 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">Create Products</div>
+  <div class="panel-body">
+    <form [formGroup]="userForm" (ngSubmit)="createProduct()">
+      <div class="form-group">
+        <label class="control-label">Product Id</label>
+        <input  class="form-control" type="text" formControlName="productId" />
+      <div class="alert alert-danger" *ngIf="!userForm.get('productId').valid && (userForm.get('productId').touched)">Please enter the product id with a minimum of 3 characters!
+      </div>
+</div>
+      <div class="form-group">
+        <label class="control-label">Product Name</label>
+        <input class="form-control" type="text" formControlName="productName" />
+        <div class="alert alert-danger" *ngIf="!userForm.get('productName').valid && (userForm.get('productName').touched)">Please enter the product Name
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label">Product Code</label>
+        <input class="form-control" type="text" formControlName="productCode" />
+        <div class="alert alert-danger" *ngIf="!userForm.get('productCode').valid && (userForm.get('productCode').touched)">Please a valid product Code
+        </div>
+      </div>
+
+
+  
+
+      <div class="form-group">
+        <label class="control-label">Release Date</label>
+        <input class="form-control" type="text" formControlName="releaseDate" />
+        <div class="alert alert-danger" *ngIf="!userForm.get('releaseDate').valid && (userForm.get('releaseDate').touched)">Please enter the release date
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label class="control-label">Description</label>
+        <input class="form-control" type="text" formControlName="description" />
+        <div class="alert alert-danger" *ngIf="!userForm.get('description').valid && (userForm.get('description').touched)">Please enter the description
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label">Price</label>
+        <input class="form-control" type="text" formControlName="price" />
+        <div class="alert alert-danger" *ngIf="!userForm.get('price').valid && (userForm.get('price').touched)">Please enter the price
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label">Star Rating</label>
+        <input class="form-control" type="text" formControlName="starRating" />
+        <div class="alert alert-danger" *ngIf="!userForm.get('starRating').valid && (userForm.get('starRating').touched)">Please enter the rating
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label">Image Url</label>
+        <input class="form-control" type="text" formControlName="imageUrl" />
+        <div class="alert alert-danger" *ngIf="!userForm.get('imageUrl').valid && (userForm.get('imageUrl').touched)">Please enter the image url
+        </div>
+      </div>
+      <button class="btn btn-primary">Create</button>
+    </form>
+  </div>
+</div>

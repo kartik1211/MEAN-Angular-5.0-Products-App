@@ -1,0 +1,17 @@
+<div class='panel panel-primary'>
+
+
+        <div class="panel-heading">Selected Product Details</div>
+        <div class="panel-body">
+            <div>  <img [src]="selectedProduct.imageUrl" style='width:100px; margin-left:20px;' /></div>
+            <div> Product Description: {{selectedProduct.description}} </div>
+            <div> Product Price: {{selectedProduct.price}} </div>
+            <div> Product Code: {{selectedProduct.productCode}} </div>
+            <div> Product Id: {{selectedProduct.productId}} </div>
+            <div> Product Name: {{selectedProduct.productName}} </div>
+            <div> Release date: {{selectedProduct.releaseDate}} </div>
+            <div> Star Rating: {{selectedProduct.starRating}} </div>
+    <button (click)='goBack()' class="btn btn-primary">Back</button>
+
+</div>
+</div>

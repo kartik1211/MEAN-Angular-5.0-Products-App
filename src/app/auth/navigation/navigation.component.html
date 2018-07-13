@@ -1,0 +1,18 @@
+<!-- <router-outlet></router-outlet> -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#" [routerLink]="['/home']">WebSiteName</a>
+      </div>
+      <ul class="nav navbar-nav" >
+        <li class="active"><a href="#" [routerLink]="['/home']" *ngIf='toggleLinks'>Home</a></li>
+        <li><a href="#" [routerLink]="['/products']" *ngIf='toggleLinks'>Products</a></li>
+        <li><a href="#" [routerLink]="['/products/create']" *ngIf='toggleLinks'>Create</a></li>
+        <li><a href="#" [routerLink]="['/login']"  *ngIf='!toggleLinks'>Login</a></li>
+        <li><a href="#" [routerLink]="['/register']"  *ngIf='!toggleLinks'>Register</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right" >
+      <li ><a (click)='logout()' *ngIf='toggleLinks'>Logout</a></li>
+    </ul>
+    </div>
+  </nav>
